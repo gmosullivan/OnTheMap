@@ -68,4 +68,9 @@ extension UdacityClient {
         static let order = "order"
     }
     
+    struct ParameterValues {
+        static let limit = "100"
+        static let order = "-updatedAt"
+    }
+    
 }
