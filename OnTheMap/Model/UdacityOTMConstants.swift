@@ -33,4 +33,12 @@ extension UdacityClient {
         static let username = "name@mail.com"
     }
     
+    struct HTTPHeaderKeys {
+        static let accept = "Accept"
+        static let apiKey = "X-Parse-REST-API-Key"
+        static let applicationId = "X-Parse-Application-Id"
+        static let contentType = "Content-Type"
+        static let xsrfToken = "X-XSRF-Token"
+    }
+    
 }
