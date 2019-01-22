@@ -8,6 +8,7 @@
 
 import Foundation
 
+// MARK: Function to ensure UI updates are handled on main
 func performUIUpdatesOnMain( _ updates: @escaping () -> Void) {
     DispatchQueue.main.async {
         updates()
