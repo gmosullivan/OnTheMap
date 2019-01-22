@@ -37,4 +37,17 @@ extension UdacityClient {
         return components.url!
     }
     
+    //MARK: Substitute key in url
+    func substituteKeyIn(url: URL, key: String, value: String) -> URL? {
+        //Function to add user id to url
+        let urlString = String(describing: url)
+        //Check if url contains key
+        if urlString.range(of: "\(key)") != nil {
+            return URL(string: urlString.replacingOccurrences(of: "\(key)", with: value))
+        } else {
+            //Otherwise return nil
+            return nil
+        }
+    }
+    
 }
