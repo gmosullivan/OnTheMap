@@ -8,6 +8,7 @@
 
 extension UdacityClient {
     
+    //MARK: HTTPBodyKeys
     struct HTTPBodyKeys {
         static let firstName = "firstName"
         static let lastName = "lastName"
@@ -21,6 +22,7 @@ extension UdacityClient {
         static let username = "username"
     }
     
+    //MARK: HTTPBodyValues
     struct HTTPBodyValues {
         static let firstName = "firstName"
         static let lastName = "lastName"
@@ -33,6 +35,7 @@ extension UdacityClient {
         static let username = "name@mail.com"
     }
     
+    //MARK: HTTPHeaderKeys
     struct HTTPHeaderKeys {
         static let accept = "Accept"
         static let apiKey = "X-Parse-REST-API-Key"
@@ -41,6 +44,7 @@ extension UdacityClient {
         static let xsrfToken = "X-XSRF-Token"
     }
     
+    //MARK: HTTPHeaderValues
     struct HTTPHeaderValues {
         static let apiKey = "QuWThTdiRmTux3YaDseUSEpUKo7aBYM737yKd4gY"
         static let applicationId = "QrX47CA9cyuGewLdsL7o5Eb8iug6Em8ye0dnAbIr"
@@ -48,6 +52,7 @@ extension UdacityClient {
         static let xsrfToken = "XSRF-TOKEN"
     }
     
+    //MARK: JsonResponseKeys
     struct JsonResponseKeys {
         static let account = "account"
         static let firstName = "first_name"
@@ -58,21 +63,25 @@ extension UdacityClient {
         static let registered = "registered"
     }
     
+    //MARK: Methods
     struct Methods {
         static let delete = "DELETE"
         static let post = "POST"
     }
     
+    //MARK: ParameterKeys
     struct ParameterKeys {
         static let limit = "limit"
         static let order = "order"
     }
     
+    //MARK: ParameterValues
     struct ParameterValues {
         static let limit = "100"
         static let order = "-updatedAt"
     }
     
+    //MARK: UrlComponents
     struct UrlComponents {
         static let ApiScheme = "https"
         static let id = "id"
@@ -83,7 +92,8 @@ extension UdacityClient {
         static let parsePath = "/parse/classes/StudentLocation"
     }
     
-    struct userId {
+    //MARK: UserId
+    struct UserId {
         static var userId = "0"
     }
     
