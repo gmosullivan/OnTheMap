@@ -17,6 +17,7 @@
 		7F8BA82621F79C6700E586EF /* UdacityClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8BA82521F79C6700E586EF /* UdacityClient.swift */; };
 		7F8BA82821F79D5600E586EF /* UdacityOTMConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8BA82721F79D5600E586EF /* UdacityOTMConstants.swift */; };
 		7F8BA82A21F7B2F300E586EF /* UdacityConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8BA82921F7B2F300E586EF /* UdacityConvenience.swift */; };
+		7F8BA82C21F7BD1800E586EF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F8BA82B21F7BD1700E586EF /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		7F8BA82521F79C6700E586EF /* UdacityClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdacityClient.swift; sourceTree = "<group>"; };
 		7F8BA82721F79D5600E586EF /* UdacityOTMConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdacityOTMConstants.swift; sourceTree = "<group>"; };
 		7F8BA82921F7B2F300E586EF /* UdacityConvenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdacityConvenience.swift; sourceTree = "<group>"; };
+		7F8BA82B21F7BD1700E586EF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +50,7 @@
 		7F8BA7FE21F7917300E586EF = {
 			isa = PBXGroup;
 			children = (
+				7F8BA82B21F7BD1700E586EF /* Default-568h@2x.png */,
 				7F8BA80921F7917300E586EF /* OnTheMap */,
 				7F8BA80821F7917300E586EF /* Products */,
 			);
@@ -179,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F8BA81521F7917300E586EF /* LaunchScreen.storyboard in Resources */,
+				7F8BA82C21F7BD1800E586EF /* Default-568h@2x.png in Resources */,
 				7F8BA81221F7917300E586EF /* Assets.xcassets in Resources */,
 				7F8BA81021F7917300E586EF /* Main.storyboard in Resources */,
 			);
