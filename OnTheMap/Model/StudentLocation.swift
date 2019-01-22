@@ -19,4 +19,42 @@ struct StudentLocation {
     let studentMapString: String
     let studentUrl: String
     
+    init(dictionary: [String:AnyObject]) {
+        if dictionary["uniqueKey"] != nil {
+            studentUniqueKey = dictionary["uniqueKey"] as! String
+        } else {
+            studentUniqueKey = "1234"
+        }
+        if dictionary["firstName"] != nil {
+            studentFirstName = dictionary["firstName"] as! String
+        } else {
+            studentFirstName = "firstName"
+        }
+        if dictionary["lastName"] != nil {
+            studentLastName = dictionary["lastName"] as! String
+        } else {
+            studentLastName = "lastName"
+        }
+        if dictionary["latitude"] != nil {
+            studentLatitude = dictionary["latitude"] as! Float
+        } else {
+            studentLatitude = 0.00
+        }
+        if dictionary["longitude"] != nil {
+            studentLongitude = dictionary["longitude"] as! Float
+        } else {
+            studentLongitude = 0.00
+        }
+        if dictionary["mapString"] != nil {
+            studentMapString = dictionary["mapString"] as! String
+        } else {
+            studentMapString = "London"
+        }
+        if dictionary["mediaURL"] != nil {
+            studentUrl = dictionary["mediaURL"] as! String
+        } else {
+            studentUrl = "https://failblog.cheezburger.com/"
+        }
+    }
+    
 }
