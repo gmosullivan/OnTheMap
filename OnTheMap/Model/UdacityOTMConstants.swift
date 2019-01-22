@@ -41,4 +41,11 @@ extension UdacityClient {
         static let xsrfToken = "X-XSRF-Token"
     }
     
+    struct HTTPHeaderValues {
+        static let apiKey = "QuWThTdiRmTux3YaDseUSEpUKo7aBYM737yKd4gY"
+        static let applicationId = "QrX47CA9cyuGewLdsL7o5Eb8iug6Em8ye0dnAbIr"
+        static let json = "application/json"
+        static let xsrfToken = "XSRF-TOKEN"
+    }
+    
 }
