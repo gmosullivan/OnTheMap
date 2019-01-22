@@ -60,4 +60,9 @@ extension UdacityClient {
         checkForErrorCompletionHandler(true, nil)
     }
     
+    func checkForError( _ success: Bool, _ error: String?, _ viewController: UIViewController) {
+        //Function to check completion handlers do not return an error
+        
+    }
+    
 }
