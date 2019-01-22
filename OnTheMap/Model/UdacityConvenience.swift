@@ -107,7 +107,7 @@ extension UdacityClient {
     }
     
     //MARK: Parse Result Functions
-    func parseDataFromRange( _ result: Data?, _ error: String?, _ viewController: UIViewController, _ parseCompletionHandler: @escaping( _ result: [String:AnyObject]?, _ error: String?) -> Void) {
+    func parseDataFromRange( _ result: Data?, _ error: String?, _ parseCompletionHandler: @escaping( _ result: [String:AnyObject]?, _ error: String?) -> Void) {
         //Function to skip first 5 characters for Udacity api
         let range = Range(5..<result!.count)
         let usableResult = result!.subdata(in: range)
@@ -119,6 +119,18 @@ extension UdacityClient {
             return
         }
         parseCompletionHandler(parsedResult, nil)
+    }
+    
+    func parseResult( _ result: Data?, error: String?, _ parseResultCompletionHandler: @escaping( _ result: [String:AnyObject]?, _ error: String?) -> Void) {
+        //Function to parse result without range
+        let parsedResult: [String:AnyObject]!
+        do {
+            parsedResult = try JSONSerialization.jsonObject(with: result!, options: .allowFragments) as! [String:AnyObject]
+        } catch {
+            parseResultCompletionHandler(nil, "Unable to parse data")
+            return
+        }
+        parseResultCompletionHandler(parsedResult, nil)
     }
     
 }
