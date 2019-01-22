@@ -21,4 +21,16 @@ extension UdacityClient {
         static let username = "username"
     }
     
+    struct HTTPBodyValues {
+        static let firstName = "firstName"
+        static let lastName = "lastName"
+        static let latitude = 0.00
+        static let longitude = 0.00
+        static let mapString = "London"
+        static let mediaURL = "https://www.udacity.com"
+        static let password = "password"
+        static let uniqueKey = "1234"
+        static let username = "name@mail.com"
+    }
+    
 }
