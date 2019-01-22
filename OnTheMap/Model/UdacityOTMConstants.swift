@@ -58,4 +58,9 @@ extension UdacityClient {
         static let registered = "registered"
     }
     
+    struct Methods {
+        static let delete = "DELETE"
+        static let post = "POST"
+    }
+    
 }
