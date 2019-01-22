@@ -88,5 +88,23 @@ extension UdacityClient {
         }
     }
     
+    //MARK: CheckHTTPURLResponse
+    func checkStatusCode( _ data: Data?, _ response: URLResponse?, _ error: Error?, _ checkStatusCodeCompletionHandler: @escaping( _ success: Bool, _ error: String?) -> Void) {
+        guard let statusCode = (response as? HTTPURLResponse)?.statusCode, statusCode >= 200 && statusCode <= 599 else {
+            checkStatusCodeCompletionHandler(false, "Something went wrong!")
+            return
+        }
+        if statusCode >= 300 && statusCode <= 399 {
+            checkStatusCodeCompletionHandler(false, "Something went wrong!")
+        } else if statusCode >= 400 && statusCode <= 499 {
+            //Check for invalid credentials
+            checkStatusCodeCompletionHandler(false, "Invalid Credentials")
+        } else if statusCode >= 500 {
+            //Check for network error
+            checkStatusCodeCompletionHandler(false, "Unable to Connect")
+        }
+        checkStatusCodeCompletionHandler(true, nil)
+    }
+    
     
 }
