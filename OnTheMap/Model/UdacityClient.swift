@@ -11,6 +11,9 @@ import UIKit
 
 class UdacityClient: NSObject {
     
+    //MARK: Shared session
+    var session = URLSession.shared
+    
     //MARK: Shared Instance
     class func sharedInstance() -> UdacityClient {
         //Create a singleton to allow global access of shared instance
