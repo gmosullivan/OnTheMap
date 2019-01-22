@@ -19,6 +19,25 @@ class UdacityClient: NSObject {
         super .init()
     }
     
+    //MARK: Handle Request
+    func handleRequest( _ request: URLRequest, _ viewController: UIViewController, withCompletionHandler: @escaping( _ result: Data?, _ error: String?) -> Void) {
+        //Function to handle data task
+        let request = request
+        let task = session.dataTask(with: request) { data,response, error in
+            //Check for an error in the data task
+            self.checkForErrorInTask(data, response, error: error) { (success, error) in
+                //Check error is nil
+                self.checkForError(success, error, viewController)
+                //Check status code
+                self.checkStatusCode(data, response, error as? Error) { (success, error) in
+                    //Pass data
+                    withCompletionHandler(data, error)
+                }
+            }
+        }
+        task.resume()
+    }
+    
     //MARK: Shared Instance
     class func sharedInstance() -> UdacityClient {
         //Create a singleton to allow global access of shared instance
