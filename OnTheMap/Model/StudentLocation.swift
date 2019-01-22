@@ -6,4 +6,9 @@
 //  Copyright © 2019 Locust Redemption. All rights reserved.
 //
 
-
+//MARK: Student Location struct to handle student locations
+struct StudentLocation {
+    
+    static var locations = [StudentLocation]()
+    
+}
