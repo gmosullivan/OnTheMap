@@ -11,4 +11,13 @@ import UIKit
 
 class UdacityClient: NSObject {
     
+    //MARK: Shared Instance
+    class func sharedInstance() -> UdacityClient {
+        //Create a singleton to allow global access of shared instance
+        struct Singleton {
+            static var sharedInstance = UdacityClient()
+        }
+        return Singleton.sharedInstance
+    }
+    
 }
