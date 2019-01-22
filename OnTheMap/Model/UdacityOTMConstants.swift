@@ -73,4 +73,14 @@ extension UdacityClient {
         static let order = "-updatedAt"
     }
     
+    struct UrlComponents {
+        static let ApiScheme = "https"
+        static let id = "id"
+        static let onTheMapHost = "onthemap-api.udacity.com"
+        static let onTheMapSessionPath = "/v1/session"
+        static let onTheMapUsersPath = "/v1/users/id"
+        static let parseHost = "parse.udacity.com"
+        static let parsePath = "/parse/classes/StudentLocation"
+    }
+    
 }
