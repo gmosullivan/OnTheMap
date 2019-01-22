@@ -11,4 +11,12 @@ import UIKit
 
 extension UdacityClient {
     
+    func buildURL( _ host: String, withPathExtension: String) -> URL {
+        var components = URLComponents()
+        components.scheme = UrlComponents.ApiScheme
+        components.host = host
+        components.path = withPathExtension
+        return components.url!
+    }
+    
 }
