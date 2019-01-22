@@ -50,4 +50,14 @@ extension UdacityClient {
         }
     }
     
+    //MARK: Check for error
+    func checkForErrorInTask( _ data: Data?, _ response: URLResponse?, error: Error?, _ checkForErrorCompletionHandler: @escaping( _ success: Bool, _ error: String?) -> Void) {
+        //Function to check data task doesn't return an error
+        guard error == nil else {
+            checkForErrorCompletionHandler(false, "Something went wrong!")
+            return
+        }
+        checkForErrorCompletionHandler(true, nil)
+    }
+    
 }
