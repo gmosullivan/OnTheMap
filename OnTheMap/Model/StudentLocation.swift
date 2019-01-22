@@ -11,4 +11,12 @@ struct StudentLocation {
     
     static var locations = [StudentLocation]()
     
+    let studentUniqueKey: String
+    let studentFirstName: String
+    let studentLastName: String
+    let studentLatitude: Float
+    let studentLongitude: Float
+    let studentMapString: String
+    let studentUrl: String
+    
 }
