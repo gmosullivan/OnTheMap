@@ -15,6 +15,7 @@
 		7F8BA82221F794DD00E586EF /* GCDBlackBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8BA82121F794DD00E586EF /* GCDBlackBox.swift */; };
 		7F8BA82421F7960A00E586EF /* StudentLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8BA82321F7960A00E586EF /* StudentLocation.swift */; };
 		7F8BA82621F79C6700E586EF /* UdacityClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8BA82521F79C6700E586EF /* UdacityClient.swift */; };
+		7F8BA82821F79D5600E586EF /* UdacityOTMConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8BA82721F79D5600E586EF /* UdacityOTMConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		7F8BA82121F794DD00E586EF /* GCDBlackBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDBlackBox.swift; sourceTree = "<group>"; };
 		7F8BA82321F7960A00E586EF /* StudentLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLocation.swift; sourceTree = "<group>"; };
 		7F8BA82521F79C6700E586EF /* UdacityClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdacityClient.swift; sourceTree = "<group>"; };
+		7F8BA82721F79D5600E586EF /* UdacityOTMConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdacityOTMConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 			children = (
 				7F8BA82321F7960A00E586EF /* StudentLocation.swift */,
 				7F8BA82521F79C6700E586EF /* UdacityClient.swift */,
+				7F8BA82721F79D5600E586EF /* UdacityOTMConstants.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 			files = (
 				7F8BA82621F79C6700E586EF /* UdacityClient.swift in Sources */,
 				7F8BA82421F7960A00E586EF /* StudentLocation.swift in Sources */,
+				7F8BA82821F79D5600E586EF /* UdacityOTMConstants.swift in Sources */,
 				7F8BA80D21F7917300E586EF /* ViewController.swift in Sources */,
 				7F8BA82221F794DD00E586EF /* GCDBlackBox.swift in Sources */,
 				7F8BA80B21F7917300E586EF /* AppDelegate.swift in Sources */,
