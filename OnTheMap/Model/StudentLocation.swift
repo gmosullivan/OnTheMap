@@ -57,4 +57,11 @@ struct StudentLocation {
         }
     }
     
+    static func studentLocationsFrom(results: [[String:AnyObject]]) -> [StudentLocation] {
+        for result in results {
+            locations.append(StudentLocation(dictionary: result))
+        }
+        return locations
+    }
+    
 }
