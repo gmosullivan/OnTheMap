@@ -14,6 +14,7 @@
 		7F8BA81521F7917300E586EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F8BA81321F7917300E586EF /* LaunchScreen.storyboard */; };
 		7F8BA82221F794DD00E586EF /* GCDBlackBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8BA82121F794DD00E586EF /* GCDBlackBox.swift */; };
 		7F8BA82421F7960A00E586EF /* StudentLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8BA82321F7960A00E586EF /* StudentLocation.swift */; };
+		7F8BA82621F79C6700E586EF /* UdacityClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8BA82521F79C6700E586EF /* UdacityClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		7F8BA81621F7917300E586EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F8BA82121F794DD00E586EF /* GCDBlackBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDBlackBox.swift; sourceTree = "<group>"; };
 		7F8BA82321F7960A00E586EF /* StudentLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLocation.swift; sourceTree = "<group>"; };
+		7F8BA82521F79C6700E586EF /* UdacityClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdacityClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				7F8BA82321F7960A00E586EF /* StudentLocation.swift */,
+				7F8BA82521F79C6700E586EF /* UdacityClient.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F8BA82621F79C6700E586EF /* UdacityClient.swift in Sources */,
 				7F8BA82421F7960A00E586EF /* StudentLocation.swift in Sources */,
 				7F8BA80D21F7917300E586EF /* ViewController.swift in Sources */,
 				7F8BA82221F794DD00E586EF /* GCDBlackBox.swift in Sources */,
