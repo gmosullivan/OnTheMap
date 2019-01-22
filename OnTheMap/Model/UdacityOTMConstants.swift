@@ -48,4 +48,14 @@ extension UdacityClient {
         static let xsrfToken = "XSRF-TOKEN"
     }
     
+    struct JsonResponseKeys {
+        static let account = "account"
+        static let firstName = "first_name"
+        static let key = "key"
+        static let lastName = "lastName"
+        static let results = "results"
+        static let session = "session"
+        static let registered = "registered"
+    }
+    
 }
