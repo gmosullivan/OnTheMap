@@ -65,4 +65,17 @@ extension UdacityClient {
         
     }
     
+    //MARK: Display Error
+    func displayError(error: String, _ description: String, viewController: UIViewController) {
+        //Function to display an alert in the view controller if there is an error
+        print(error)
+        let alert = UIAlertController(title: error, message: description, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default, handler: nil))
+        //Ensure on main thread
+        performUIUpdatesOnMain {
+            viewController.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    
 }
