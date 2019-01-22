@@ -9,8 +9,10 @@
 //MARK: Student Location struct to handle student locations
 struct StudentLocation {
     
+    //MARK: Locations array to store locations
     static var locations = [StudentLocation]()
     
+    //MARK: Constants
     let studentUniqueKey: String
     let studentFirstName: String
     let studentLastName: String
@@ -19,10 +21,13 @@ struct StudentLocation {
     let studentMapString: String
     let studentUrl: String
     
+    //MARK: Initializers
     init(dictionary: [String:AnyObject]) {
+        //Takes dictionary and adds results to Studden Location properties
         if dictionary["uniqueKey"] != nil {
             studentUniqueKey = dictionary["uniqueKey"] as! String
         } else {
+            //Enters a default if dictionary result is nil
             studentUniqueKey = "1234"
         }
         if dictionary["firstName"] != nil {
@@ -57,8 +62,11 @@ struct StudentLocation {
         }
     }
     
+    //MARK: Student Location Methods
     static func studentLocationsFrom(results: [[String:AnyObject]]) -> [StudentLocation] {
+        //For loop iterates through results....
         for result in results {
+            //and adds locations to array
             locations.append(StudentLocation(dictionary: result))
         }
         return locations
