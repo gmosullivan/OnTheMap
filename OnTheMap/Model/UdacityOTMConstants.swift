@@ -83,4 +83,8 @@ extension UdacityClient {
         static let parsePath = "/parse/classes/StudentLocation"
     }
     
+    struct userId {
+        static var userId = "0"
+    }
+    
 }
