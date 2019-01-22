@@ -62,7 +62,18 @@ extension UdacityClient {
     
     func checkForError( _ success: Bool, _ error: String?, _ viewController: UIViewController) {
         //Function to check completion handlers do not return an error
-        
+        guard error == nil else {
+            if error == "Something went wrong!" {
+                displayError(error: error!, "Please check your network connection or try again later.", viewController: viewController)
+            } else if error == "Invalid Credentials" {
+                displayError(error: error!, "Please check your email address and password are correct and try again.", viewController: viewController)
+            } else if error == "Unable to Connect" {
+                displayError(error: error!, "Please check your network connection and try again.", viewController: viewController)
+            } else {
+                displayError(error: "Something went wrong!", "Please check your network connection or try again later.", viewController: viewController)
+            }
+            return
+        }
     }
     
     //MARK: Display Error
