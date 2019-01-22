@@ -11,7 +11,9 @@ import UIKit
 
 extension UdacityClient {
     
-    func buildURL( _ host: String, withPathExtension: String) -> URL {
+    //MARK: Build Url
+    func buildUrl( _ host: String, withPathExtension: String) -> URL {
+        //Function to store url components and return url for URLRequest
         var components = URLComponents()
         components.scheme = UrlComponents.ApiScheme
         components.host = host
