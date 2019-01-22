@@ -63,4 +63,9 @@ extension UdacityClient {
         static let post = "POST"
     }
     
+    struct ParameterKeys {
+        static let limit = "limit"
+        static let order = "order"
+    }
+    
 }
