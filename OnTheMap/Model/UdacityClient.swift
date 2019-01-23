@@ -84,11 +84,18 @@ class UdacityClient: NSObject {
                         //Check success
                         if success {
                             //Call get student locations to propegate Map and Table views
-                                //Move to main thread
-                                performUIUpdatesOnMain {
-                                    //Login
-                                    viewController.performSegue(withIdentifier: "Login", sender: viewController)
+                            self.getStudentLocations(viewController) { (success) in
+                                //Check success
+                                if success {
+                                    //Move to main thread
+                                    performUIUpdatesOnMain {
+                                        //Login
+                                        viewController.performSegue(withIdentifier: "Login", sender: viewController)
+                                    }
+                                } else {
+                                    self.displayError(error: "Something went wrong!", "Please check your network connection or try again later.", viewController: viewController)
                                 }
+                            }
                         } else {
                             self.displayError(error: "Something went wrong!", "Please check your network connection or try again later.", viewController: viewController)
                         }
