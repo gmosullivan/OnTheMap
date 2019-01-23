@@ -80,15 +80,22 @@ class UdacityClient: NSObject {
                 UserId.userId = accountId
                 if isRegistered {
                     //Call get user details
-                        //Call get student locations to propegate Map and Table views
-                            //Move to main thread
-                            performUIUpdatesOnMain {
-                                //Login
-                                viewController.performSegue(withIdentifier: "Login", sender: viewController)
-                            }
+                    self.getUserDetails(viewController) { (success) in
+                        //Check success
+                        if success {
+                            //Call get student locations to propegate Map and Table views
+                                //Move to main thread
+                                performUIUpdatesOnMain {
+                                    //Login
+                                    viewController.performSegue(withIdentifier: "Login", sender: viewController)
+                                }
                         } else {
                             self.displayError(error: "Something went wrong!", "Please check your network connection or try again later.", viewController: viewController)
                         }
+                    }
+                } else {
+                    self.displayError(error: "Something ent wrong!", "Please check your network connection or try again later.", viewController: viewController)
+                }
             }
         }
     }
