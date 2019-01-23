@@ -129,6 +129,40 @@ class UdacityClient: NSObject {
         }
     }
     
+    //MARK: Get user details
+    func getUserDetails( _ viewController: UIViewController, _ userCompletionHandler: @escaping( _ success: Bool) -> Void) {
+        //Create url
+        let userInfoUrl = buildUrl(UrlComponents.onTheMapHost, withPathExtension: UrlComponents.onTheMapUsersPath)
+        //Add user id to url
+        var mutableUrl: URL = userInfoUrl
+        mutableUrl = substituteKeyIn(url: userInfoUrl, key: UrlComponents.id, value: UserId.userId)!
+        //Create request
+        let request = URLRequest(url: mutableUrl)
+        //Call handle request
+        handleRequest(request, viewController) { (result, error) in
+            //Parse data with first 5 characters removed
+            self.parseDataFromRange(result, error) { (result, error) in
+                //Get user's first name
+                guard let userFirstName = result![JsonResponseKeys.firstName] as? String else {
+                    self.displayError(error: "Something went wrong!", "Please check your network connection or try again later.", viewController: viewController)
+                    userCompletionHandler(false)
+                    return
+                }
+                //Add first name to model
+                HTTPBodyValues.firstName = userFirstName
+                //Get user's last name
+                guard let userLastName = result![JsonResponseKeys.lastName] as? String else {
+                    self.displayError(error: "Something went wrong!", "Please check your network connection or try again later.", viewController: viewController)
+                    userCompletionHandler(false)
+                    return
+                }
+                //Add last name to model
+                HTTPBodyValues.lastName = userLastName
+                userCompletionHandler(true)
+            }
+        }
+    }
+    
     //MARK: Shared Instance
     class func sharedInstance() -> UdacityClient {
         //Create a singleton to allow global access of shared instance
