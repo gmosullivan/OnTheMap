@@ -151,7 +151,6 @@ class UdacityClient: NSObject {
             self.parseDataFromRange(result, error) { (result, error) in
                 //Get user's first name
                 guard let userFirstName = result![JsonResponseKeys.firstName] as? String else {
-                    self.displayError(error: "Something went wrong!", "Please check your network connection or try again later.", viewController: viewController)
                     userCompletionHandler(false)
                     return
                 }
@@ -159,13 +158,38 @@ class UdacityClient: NSObject {
                 HTTPBodyValues.firstName = userFirstName
                 //Get user's last name
                 guard let userLastName = result![JsonResponseKeys.lastName] as? String else {
-                    self.displayError(error: "Something went wrong!", "Please check your network connection or try again later.", viewController: viewController)
                     userCompletionHandler(false)
                     return
                 }
                 //Add last name to model
                 HTTPBodyValues.lastName = userLastName
                 userCompletionHandler(true)
+            }
+        }
+    }
+    
+    //MARK: Get Student Locations
+    func getStudentLocations( _ viewController: UIViewController, _ locationsCompletionHandler: @escaping( _ success: Bool) -> Void) {
+        //Set query items for url
+        let queryItems = [ParameterKeys.limit: ParameterValues.limit, ParameterValues.order: ParameterValues.order] as [String:AnyObject]
+        //Create url
+        let studentLocationUrl = buildUrl(UrlComponents.parseHost, UrlComponents.parsePath, withQueryItems: queryItems)
+        //Create request
+        var request = URLRequest(url: studentLocationUrl)
+        request.addValue(HTTPHeaderValues.applicationId, forHTTPHeaderField: HTTPHeaderKeys.applicationId)
+        request.addValue(HTTPHeaderValues.apiKey, forHTTPHeaderField: HTTPHeaderKeys.apiKey)
+        //Call hande request
+        handleRequest(request, viewController) { (result, error) in
+            //Parse result
+            self.parseResult(result, error: error) { (result, error) in
+                //Get results
+                guard let results = result![JsonResponseKeys.results] as? [[String:AnyObject]] else {
+                    locationsCompletionHandler(false)
+                    return
+                }
+                //Add results to locations array
+                StudentLocation.locations = StudentLocation.studentLocationsFrom(results: results)
+                locationsCompletionHandler(true)
             }
         }
     }
