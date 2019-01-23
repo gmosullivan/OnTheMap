@@ -24,15 +24,15 @@ extension UdacityClient {
     
     //MARK: HTTPBodyValues
     struct HTTPBodyValues {
-        static let firstName = "firstName"
-        static let lastName = "lastName"
-        static let latitude = 0.00
-        static let longitude = 0.00
-        static let mapString = "London"
-        static let mediaURL = "https://www.udacity.com"
-        static let password = "password"
-        static let uniqueKey = "1234"
-        static let username = "name@mail.com"
+        static var firstName = "firstName"
+        static var lastName = "lastName"
+        static var latitude = 0.00
+        static var longitude = 0.00
+        static var mapString = "London"
+        static var mediaURL = "https://www.udacity.com"
+        static var password = "password"
+        static var uniqueKey = "1234"
+        static var username = "name@mail.com"
     }
     
     //MARK: HTTPHeaderKeys
