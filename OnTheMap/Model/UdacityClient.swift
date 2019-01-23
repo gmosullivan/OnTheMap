@@ -59,7 +59,7 @@ class UdacityClient: NSObject {
         }
         //Call handle request
         handleRequest(request, viewController) { (result, error) in
-            //Remove first 5 characters
+            //Parse data with first 5 characters removed
             self.parseDataFromRange(result, error) { (result, error) in
                 //Get account info
                 guard let accountInfo = result![JsonResponseKeys.account] as? [String:AnyObject] else {
@@ -89,6 +89,42 @@ class UdacityClient: NSObject {
                         } else {
                             self.displayError(error: "Something went wrong!", "Please check your network connection or try again later.", viewController: viewController)
                         }
+            }
+        }
+    }
+    
+    //MARK: Task for logout
+    func taskForLogout( _ viewController: UIViewController) {
+        //Create url
+        let logoutUrl = buildUrl(UrlComponents.onTheMapHost, withPathExtension: UrlComponents.onTheMapSessionPath)
+        //Create request
+        var request = URLRequest(url: logoutUrl)
+        request.httpMethod = Methods.delete
+        //Check for xsrf cookie
+        var xsrfCookie: HTTPCookie? = nil
+        let sharedStorage = HTTPCookieStorage.shared
+        for cookie in sharedStorage.cookies! {
+            if cookie.name == HTTPHeaderValues.xsrfToken { xsrfCookie = cookie }
+        }
+        if let xsrfCookie = xsrfCookie {
+            request.setValue(xsrfCookie.value, forHTTPHeaderField: HTTPHeaderKeys.xsrfToken)
+        }
+        //Call handle request
+        handleRequest(request, viewController) { (result, error) in
+            //Parse data with first 5 characters removed
+            self.parseDataFromRange(result, error) { (result, error) in
+                //Get session from result
+                guard let session = result![JsonResponseKeys.session] as? [String:Any] else {
+                    self.displayError(error: "Something went wrong!", "Please check your network connection or try again later.", viewController: viewController)
+                    return
+                }
+                //Check session array is not empty
+                if session.count > 0 {
+                    //Move to main
+                    performUIUpdatesOnMain {
+                        viewController.dismiss(animated: true)
+                    }
+                }
             }
         }
     }
