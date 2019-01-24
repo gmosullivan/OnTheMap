@@ -21,5 +21,30 @@ class OTMMapViewController: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    //MARK: Display student locations
+    func displayStudentLocations() {
+        //For loop to add annotations to annotations array
+        for location in StudentLocation.locations {
+            //Set coordinates
+            let lat = CLLocationDegrees(location.studentLatitude)
+            let lon = CLLocationDegrees(location.studentLongitude)
+            let coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lon)
+            //Set title
+            let first = location.studentFirstName
+            let last = location.studentLastName
+            //Set subtitle
+            let url = location.studentUrl
+            //Add to annotation
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = coordinate
+            annotation.title = "\(first) \(last)"
+            annotation.subtitle = url
+            //Add to annotations array
+            annotations.append(annotation)
+        }
+        //Add array to map view
+        mapView.addAnnotations(annotations)
+    }
 
 }
