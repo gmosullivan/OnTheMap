@@ -23,6 +23,11 @@ class OTMWebViewController: UIViewController, WKUIDelegate {
         webView.uiDelegate = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        loadWebView(urlString)
+    }
+    
     //MARK: Load web view
     func loadWebView( _ url: String) {
         //Create request
