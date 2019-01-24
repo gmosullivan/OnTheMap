@@ -19,6 +19,8 @@
 		7F8BA82A21F7B2F300E586EF /* UdacityConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8BA82921F7B2F300E586EF /* UdacityConvenience.swift */; };
 		7F8BA82C21F7BD1800E586EF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F8BA82B21F7BD1700E586EF /* Default-568h@2x.png */; };
 		7F8BA82E21F99EB600E586EF /* OTMWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8BA82D21F99EB600E586EF /* OTMWebViewController.swift */; };
+		7F8BA83021F9FEF900E586EF /* OTMMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8BA82F21F9FEF900E586EF /* OTMMapViewController.swift */; };
+		7F8BA83221F9FF8500E586EF /* OTMTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8BA83121F9FF8500E586EF /* OTMTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		7F8BA82921F7B2F300E586EF /* UdacityConvenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdacityConvenience.swift; sourceTree = "<group>"; };
 		7F8BA82B21F7BD1700E586EF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		7F8BA82D21F99EB600E586EF /* OTMWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTMWebViewController.swift; sourceTree = "<group>"; };
+		7F8BA82F21F9FEF900E586EF /* OTMMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTMMapViewController.swift; sourceTree = "<group>"; };
+		7F8BA83121F9FF8500E586EF /* OTMTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTMTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,8 @@
 			children = (
 				7F8BA80C21F7917300E586EF /* OTMLoginViewController.swift */,
 				7F8BA82D21F99EB600E586EF /* OTMWebViewController.swift */,
+				7F8BA82F21F9FEF900E586EF /* OTMMapViewController.swift */,
+				7F8BA83121F9FF8500E586EF /* OTMTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -205,6 +211,8 @@
 				7F8BA80D21F7917300E586EF /* OTMLoginViewController.swift in Sources */,
 				7F8BA82221F794DD00E586EF /* GCDBlackBox.swift in Sources */,
 				7F8BA82A21F7B2F300E586EF /* UdacityConvenience.swift in Sources */,
+				7F8BA83021F9FEF900E586EF /* OTMMapViewController.swift in Sources */,
+				7F8BA83221F9FF8500E586EF /* OTMTableViewController.swift in Sources */,
 				7F8BA80B21F7917300E586EF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
