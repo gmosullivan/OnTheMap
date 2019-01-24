@@ -17,7 +17,10 @@ class OTMAddLocationViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var urlTextField: UITextField!
     @IBOutlet weak var findLocationButton: UIButton!
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var finishButton: UIButton!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
+    //MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         locationTextField.delegate = self
@@ -26,6 +29,13 @@ class OTMAddLocationViewController: UIViewController, UITextFieldDelegate {
         urlTextField.isHidden = false
         findLocationButton.isHidden = false
         mapView.isHidden = true
+        finishButton.isHidden = true
+        activityIndicator.isHidden = true
+    }
+    
+    //MARK: Actions
+    @IBAction func postNewLocation() {
+        UdacityClient.sharedInstance().postNewLocation(self)
     }
 
 }

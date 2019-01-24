@@ -392,23 +392,46 @@
                                     <constraint firstAttribute="height" constant="360" id="sOp-hB-lrN"/>
                                 </constraints>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XI0-hT-TMa">
+                                <rect key="frame" x="30" y="464" width="260" height="30"/>
+                                <color key="backgroundColor" red="0.015686274510000001" green="0.66274509800000003" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="D3o-mW-CnN"/>
+                                    <constraint firstAttribute="width" constant="260" id="jp9-Pv-JGP"/>
+                                </constraints>
+                                <state key="normal" title="Finish">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="postNewLocation" destination="d2W-uc-qoW" eventType="touchUpInside" id="If2-ft-D4L"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="edQ-O7-NsV">
+                                <rect key="frame" x="150" y="274" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="5Qw-gS-1iu" firstAttribute="centerY" secondItem="Bhb-ci-XMp" secondAttribute="centerY" constant="-10" id="7B4-ST-Xaj"/>
+                            <constraint firstItem="XI0-hT-TMa" firstAttribute="centerY" secondItem="Bhb-ci-XMp" secondAttribute="centerY" constant="195" id="H1Y-ko-uko"/>
                             <constraint firstItem="5Qw-gS-1iu" firstAttribute="centerX" secondItem="Bhb-ci-XMp" secondAttribute="centerX" id="JaJ-b1-kOI"/>
                             <constraint firstItem="D1O-z3-XGc" firstAttribute="centerY" secondItem="Bhb-ci-XMp" secondAttribute="centerY" constant="30" id="SCa-fs-4qh"/>
                             <constraint firstItem="2xS-xv-09H" firstAttribute="centerX" secondItem="Bhb-ci-XMp" secondAttribute="centerX" id="YFA-fO-N4r"/>
                             <constraint firstItem="P1I-eE-3mh" firstAttribute="centerY" secondItem="Bhb-ci-XMp" secondAttribute="centerY" constant="-10" id="dyN-9F-wHB"/>
+                            <constraint firstItem="XI0-hT-TMa" firstAttribute="centerX" secondItem="Bhb-ci-XMp" secondAttribute="centerX" id="hOh-tX-YhX"/>
                             <constraint firstItem="P1I-eE-3mh" firstAttribute="centerX" secondItem="Bhb-ci-XMp" secondAttribute="centerX" id="jsF-Kf-zUI"/>
                             <constraint firstItem="2xS-xv-09H" firstAttribute="centerY" secondItem="Bhb-ci-XMp" secondAttribute="centerY" constant="-50" id="m9k-bG-sgV"/>
                             <constraint firstItem="D1O-z3-XGc" firstAttribute="centerX" secondItem="Bhb-ci-XMp" secondAttribute="centerX" id="mgi-LM-JOb"/>
+                            <constraint firstItem="edQ-O7-NsV" firstAttribute="centerY" secondItem="Bhb-ci-XMp" secondAttribute="centerY" id="wIT-Il-B6d"/>
+                            <constraint firstItem="edQ-O7-NsV" firstAttribute="centerX" secondItem="Bhb-ci-XMp" secondAttribute="centerX" id="xRF-wh-1mD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aJj-d9-GFT"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Your Location" id="WLh-8c-Paw"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="edQ-O7-NsV" id="X1f-Ma-gfe"/>
                         <outlet property="findLocationButton" destination="D1O-z3-XGc" id="a7h-d1-yqE"/>
+                        <outlet property="finishButton" destination="XI0-hT-TMa" id="RDT-GT-Blh"/>
                         <outlet property="locationTextField" destination="2xS-xv-09H" id="Z1q-i6-LK6"/>
                         <outlet property="mapView" destination="5Qw-gS-1iu" id="YXK-dh-uCO"/>
                         <outlet property="urlTextField" destination="P1I-eE-3mh" id="Bah-Lm-ouk"/>
