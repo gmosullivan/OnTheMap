@@ -28,6 +28,11 @@ class OTMMapViewController: UIViewController, MKMapViewDelegate {
         self.mapView.reloadInputViews()
     }
     
+    //MARK: Logout
+    @IBAction func logout() {
+        UdacityClient.sharedInstance().taskForLogout(self)
+    }
+    
     //MARK: Display student locations
     func displayStudentLocations() {
         //For loop to add annotations to annotations array
