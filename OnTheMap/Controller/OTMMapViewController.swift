@@ -75,5 +75,21 @@ class OTMMapViewController: UIViewController, MKMapViewDelegate {
         }
         return pinView
     }
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        //Check control
+        if control == view.rightCalloutAccessoryView {
+            //Set url
+            let locationUrl = view.annotation?.subtitle!
+            //Check valid url
+            if (locationUrl?.contains("http"))! {
+                let viewController = self.storyboard!.instantiateViewController(withIdentifier: "OTMWebViewController") as! OTMWebViewController
+                viewController.urlString = locationUrl!
+                self.navigationController!.popToViewController(viewController, animated: true)
+            } else {
+                UdacityClient.sharedInstance().displayError(error: "Invalid URL", "This does not appear to be a valid URL. Please try another student.", viewController: self)
+            }
+        }
+    }
 
 }
