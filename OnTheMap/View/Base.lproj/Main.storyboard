@@ -207,11 +207,11 @@
             </objects>
             <point key="canvasLocation" x="474" y="-614"/>
         </scene>
-        <!--Item 1-->
+        <!--Navigation Controller-->
         <scene sceneID="jh0-cp-HuC">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JfM-vg-jPb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="3Kh-yB-w5V"/>
+                    <tabBarItem key="tabBarItem" title="" image="icon_mapview-deselected" selectedImage="icon_mapview-selected" id="3Kh-yB-w5V"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0Cx-AG-r1z">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
@@ -226,11 +226,11 @@
             </objects>
             <point key="canvasLocation" x="2270.625" y="-207.04225352112675"/>
         </scene>
-        <!--Item 2-->
+        <!--Navigation Controller-->
         <scene sceneID="1qV-bO-cHr">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2Di-u2-UbK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="CPi-Kp-Vc2"/>
+                    <tabBarItem key="tabBarItem" title="" image="icon_listview-deselected" selectedImage="icon_listview-selected" id="CPi-Kp-Vc2"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DZ7-0z-oua">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
@@ -291,4 +291,10 @@
             <point key="canvasLocation" x="3033" y="466"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon_listview-deselected" width="75" height="50"/>
+        <image name="icon_listview-selected" width="75" height="50"/>
+        <image name="icon_mapview-deselected" width="75" height="50"/>
+        <image name="icon_mapview-selected" width="75" height="50"/>
+    </resources>
 </document>
