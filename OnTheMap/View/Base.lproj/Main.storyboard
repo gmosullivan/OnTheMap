@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Login View Controller-->
+        <!--On The Map-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="OTMLoginViewController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
@@ -91,7 +91,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="QlM-UY-8eP"/>
+                    <navigationItem key="navigationItem" title="On The Map" id="QlM-UY-8eP"/>
                     <connections>
                         <outlet property="emailTextField" destination="czY-rn-lRa" id="VHh-bd-BOc"/>
                         <outlet property="passwordTextField" destination="fbv-tE-3lJ" id="owk-3c-j0q"/>
@@ -102,7 +102,7 @@
             </objects>
             <point key="canvasLocation" x="476" y="132.68365817091455"/>
         </scene>
-        <!--Map View Controller-->
+        <!--On The Map-->
         <scene sceneID="PpR-wZ-PYU">
             <objects>
                 <viewController id="mvD-Wq-UJz" customClass="OTMMapViewController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
@@ -112,7 +112,22 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="IJc-UF-Dcy"/>
                     </view>
-                    <navigationItem key="navigationItem" id="fkw-M8-qdT"/>
+                    <navigationItem key="navigationItem" title="On The Map" id="fkw-M8-qdT">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="jJg-sI-Bk9">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6mS-s5-0SP">
+                                <rect key="frame" x="16" y="7" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="icon_pin" id="L2N-1M-YFe">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qJa-nK-ibt">
+                                <rect key="frame" x="233" y="7" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rcs-17-nFe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -136,7 +151,7 @@
             </objects>
             <point key="canvasLocation" x="1254" y="132"/>
         </scene>
-        <!--Web View Controller-->
+        <!--Sign Up-->
         <scene sceneID="bfm-af-uG3">
             <objects>
                 <viewController storyboardIdentifier="OTMWebViewController" id="DCB-j5-hew" customClass="OTMWebViewController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
@@ -162,7 +177,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="K8C-7P-0cY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="qVd-CF-DVj"/>
+                    <navigationItem key="navigationItem" title="Sign Up" id="qVd-CF-DVj"/>
                     <connections>
                         <outlet property="webView" destination="HN0-Mo-sSX" id="Tiv-mC-8Vm"/>
                     </connections>
@@ -245,7 +260,7 @@
             </objects>
             <point key="canvasLocation" x="2270.625" y="470.07042253521126"/>
         </scene>
-        <!--Table View Controller-->
+        <!--On The Map-->
         <scene sceneID="Hyq-m0-HYw">
             <objects>
                 <tableViewController id="q2V-OZ-RcK" customClass="OTMTableViewController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
@@ -284,7 +299,22 @@
                             <outlet property="delegate" destination="q2V-OZ-RcK" id="ZI3-qJ-hXd"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="zlh-n9-e4o"/>
+                    <navigationItem key="navigationItem" title="On The Map" id="zlh-n9-e4o">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="FOa-Nv-8PK">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gH4-wY-yfU">
+                                <rect key="frame" x="16" y="7" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="icon_pin" id="rzW-TP-Ski">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xDo-xQ-MZt">
+                                <rect key="frame" x="233" y="7" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1oc-rk-j4A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -296,5 +326,6 @@
         <image name="icon_listview-selected" width="75" height="50"/>
         <image name="icon_mapview-deselected" width="75" height="50"/>
         <image name="icon_mapview-selected" width="75" height="50"/>
+        <image name="icon_pin" width="24" height="24"/>
     </resources>
 </document>
