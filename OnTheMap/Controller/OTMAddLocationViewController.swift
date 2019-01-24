@@ -11,9 +11,13 @@ import CoreLocation
 import MapKit
 
 class OTMAddLocationViewController: UIViewController, UITextFieldDelegate {
+    
+    //MARK: Outlets
+    @IBOutlet weak var locationTextField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        locationTextField.delegate = self
     }
 
 }
