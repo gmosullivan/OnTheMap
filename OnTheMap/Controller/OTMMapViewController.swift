@@ -22,6 +22,12 @@ class OTMMapViewController: UIViewController, MKMapViewDelegate {
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        displayStudentLocations()
+        self.mapView.reloadInputViews()
+    }
+    
     //MARK: Display student locations
     func displayStudentLocations() {
         //For loop to add annotations to annotations array
