@@ -10,8 +10,12 @@ import UIKit
 
 class OTMLoginViewController: UIViewController, UITextFieldDelegate {
 
+    //MARK: Outlets
+    @IBOutlet weak var emailTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        emailTextField.delegate = self
     }
 
 }
