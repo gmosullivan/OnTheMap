@@ -34,5 +34,21 @@ class OTMTableViewController: UITableViewController {
         //Return cell
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //Get url from Student Location
+        let locationURL = StudentLocation.locations[indexPath.row].studentUrl
+        //Check url
+        if locationURL.contains("http") {
+            //Instantiate Web view controller
+            let viewController = self.storyboard!.instantiateViewController(withIdentifier: "OTMWebViewController") as! OTMWebViewController
+            //Pass url
+            viewController.urlString = locationURL
+            //Pop to Web view controller
+            self.navigationController!.popToViewController(viewController, animated: true)
+        } else {
+            UdacityClient.sharedInstance().displayError(error: "Invalid URL", "This does not appear to be a valid URL. Please try another student.", viewController: self)
+        }
+    }
 
 }
