@@ -21,6 +21,7 @@
 		7F8BA82E21F99EB600E586EF /* OTMWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8BA82D21F99EB600E586EF /* OTMWebViewController.swift */; };
 		7F8BA83021F9FEF900E586EF /* OTMMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8BA82F21F9FEF900E586EF /* OTMMapViewController.swift */; };
 		7F8BA83221F9FF8500E586EF /* OTMTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8BA83121F9FF8500E586EF /* OTMTableViewController.swift */; };
+		7F8BA83421FA1EB400E586EF /* OTMAddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8BA83321FA1EB400E586EF /* OTMAddLocationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		7F8BA82D21F99EB600E586EF /* OTMWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTMWebViewController.swift; sourceTree = "<group>"; };
 		7F8BA82F21F9FEF900E586EF /* OTMMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTMMapViewController.swift; sourceTree = "<group>"; };
 		7F8BA83121F9FF8500E586EF /* OTMTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTMTableViewController.swift; sourceTree = "<group>"; };
+		7F8BA83321FA1EB400E586EF /* OTMAddLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTMAddLocationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				7F8BA82D21F99EB600E586EF /* OTMWebViewController.swift */,
 				7F8BA82F21F9FEF900E586EF /* OTMMapViewController.swift */,
 				7F8BA83121F9FF8500E586EF /* OTMTableViewController.swift */,
+				7F8BA83321FA1EB400E586EF /* OTMAddLocationViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F8BA83421FA1EB400E586EF /* OTMAddLocationViewController.swift in Sources */,
 				7F8BA82621F79C6700E586EF /* UdacityClient.swift in Sources */,
 				7F8BA82421F7960A00E586EF /* StudentLocation.swift in Sources */,
 				7F8BA82E21F99EB600E586EF /* OTMWebViewController.swift in Sources */,
