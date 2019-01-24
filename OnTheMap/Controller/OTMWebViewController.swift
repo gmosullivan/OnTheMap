@@ -14,6 +14,9 @@ class OTMWebViewController: UIViewController, WKUIDelegate {
     //Web view
     @IBOutlet weak var webView: WKWebView!
     
+    //Url String
+    var urlString = "https://auth.udacity.com/sign-up"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         webView.uiDelegate = self
