@@ -14,6 +14,9 @@ class OTMMapViewController: UIViewController, MKMapViewDelegate {
     //MARK: Annotations array
     var annotations = [MKPointAnnotation]()
     
+    //Outlets
+    @IBOutlet weak var mapView: MKMapView!
+    
     //MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()

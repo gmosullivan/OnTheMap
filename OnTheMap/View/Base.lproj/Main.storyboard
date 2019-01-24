@@ -109,7 +109,18 @@
                     <view key="view" contentMode="scaleToFill" id="4kT-0I-P2u">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="huI-5h-QzB">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="huI-5h-QzB" firstAttribute="top" secondItem="IJc-UF-Dcy" secondAttribute="top" id="2n1-Mb-a0t"/>
+                            <constraint firstItem="huI-5h-QzB" firstAttribute="leading" secondItem="IJc-UF-Dcy" secondAttribute="leading" id="IpY-yd-AHC"/>
+                            <constraint firstItem="huI-5h-QzB" firstAttribute="bottom" secondItem="IJc-UF-Dcy" secondAttribute="bottom" id="aFT-AU-zQd"/>
+                            <constraint firstItem="huI-5h-QzB" firstAttribute="trailing" secondItem="IJc-UF-Dcy" secondAttribute="trailing" id="xuQ-gn-xl5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="IJc-UF-Dcy"/>
                     </view>
                     <navigationItem key="navigationItem" title="On The Map" id="fkw-M8-qdT">
@@ -128,10 +139,13 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="huI-5h-QzB" id="UAC-ek-PZL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rcs-17-nFe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3030" y="-207"/>
+            <point key="canvasLocation" x="3030" y="-207.04225352112675"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Yil-Qk-g2v">
