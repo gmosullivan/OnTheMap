@@ -71,6 +71,9 @@
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" red="0.015686274510000001" green="0.66274509800000003" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="GUt-bI-h4P" kind="presentation" id="Crd-65-5lx"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -98,6 +101,22 @@
             </objects>
             <point key="canvasLocation" x="476" y="132.68365817091455"/>
         </scene>
+        <!--Web View Controller-->
+        <scene sceneID="bfm-af-uG3">
+            <objects>
+                <viewController id="DCB-j5-hew" customClass="OTMWebViewController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gpp-sD-kh5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="K8C-7P-0cY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qVd-CF-DVj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ozP-xW-xn4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1256" y="-614"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="PLl-q1-bNH">
             <objects>
@@ -115,6 +134,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4cl-TW-NnI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-270" y="133"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Zmi-85-qRK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GUt-bI-h4P" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Jvu-rN-3Jc">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="DCB-j5-hew" kind="relationship" relationship="rootViewController" id="jbD-Q9-TB9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rii-Jh-tX6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="474" y="-614"/>
         </scene>
     </scenes>
 </document>
