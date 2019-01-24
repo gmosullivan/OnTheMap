@@ -57,5 +57,23 @@ class OTMMapViewController: UIViewController, MKMapViewDelegate {
         //Add array to map view
         mapView.addAnnotations(annotations)
     }
+    
+    //MARK: MKMapView Delegate fuctions
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        //Create pin
+        let reuseId = "pin"
+        //Create pin view
+        var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId) as? MKPinAnnotationView
+        //Check pin view
+        if pinView == nil {
+            pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+            pinView!.canShowCallout = true
+            pinView!.pinTintColor = .red
+            pinView!.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+        } else {
+            pinView!.annotation = annotation
+        }
+        return pinView
+    }
 
 }
