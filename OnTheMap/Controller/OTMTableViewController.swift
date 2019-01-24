@@ -23,14 +23,16 @@ class OTMTableViewController: UITableViewController {
         return StudentLocation.locations.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        //Create table view cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "locations", for: indexPath)
+        //Get location for row from locations array
+        let location = StudentLocation.locations[indexPath.row]
+        //Configure cell
+        cell.textLabel?.text = "\(location.studentFirstName) \(location.studentLastName)"
+        cell.detailTextLabel?.text = "\(location.studentUrl)"
+        //Return cell
         return cell
     }
-    */
 
 }
