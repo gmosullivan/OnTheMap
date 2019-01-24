@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7F8BA80B21F7917300E586EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8BA80A21F7917300E586EF /* AppDelegate.swift */; };
-		7F8BA80D21F7917300E586EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8BA80C21F7917300E586EF /* ViewController.swift */; };
+		7F8BA80D21F7917300E586EF /* OTMLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8BA80C21F7917300E586EF /* OTMLoginViewController.swift */; };
 		7F8BA81021F7917300E586EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F8BA80E21F7917300E586EF /* Main.storyboard */; };
 		7F8BA81221F7917300E586EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F8BA81121F7917300E586EF /* Assets.xcassets */; };
 		7F8BA81521F7917300E586EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F8BA81321F7917300E586EF /* LaunchScreen.storyboard */; };
@@ -23,7 +23,7 @@
 /* Begin PBXFileReference section */
 		7F8BA80721F7917300E586EF /* OnTheMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTheMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F8BA80A21F7917300E586EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7F8BA80C21F7917300E586EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7F8BA80C21F7917300E586EF /* OTMLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTMLoginViewController.swift; sourceTree = "<group>"; };
 		7F8BA80F21F7917300E586EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7F8BA81121F7917300E586EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F8BA81421F7917300E586EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 		7F8BA81E21F7936300E586EF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7F8BA80C21F7917300E586EF /* ViewController.swift */,
+				7F8BA80C21F7917300E586EF /* OTMLoginViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -198,7 +198,7 @@
 				7F8BA82621F79C6700E586EF /* UdacityClient.swift in Sources */,
 				7F8BA82421F7960A00E586EF /* StudentLocation.swift in Sources */,
 				7F8BA82821F79D5600E586EF /* UdacityOTMConstants.swift in Sources */,
-				7F8BA80D21F7917300E586EF /* ViewController.swift in Sources */,
+				7F8BA80D21F7917300E586EF /* OTMLoginViewController.swift in Sources */,
 				7F8BA82221F794DD00E586EF /* GCDBlackBox.swift in Sources */,
 				7F8BA82A21F7B2F300E586EF /* UdacityConvenience.swift in Sources */,
 				7F8BA80B21F7917300E586EF /* AppDelegate.swift in Sources */,

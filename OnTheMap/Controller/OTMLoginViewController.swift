@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  OTMLoginViewController.swift
 //  OnTheMap
 //
 //  Created by Gareth O'Sullivan on 22/01/2019.
@@ -8,11 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class OTMLoginViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
 }
