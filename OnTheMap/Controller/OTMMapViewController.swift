@@ -11,6 +11,9 @@ import MapKit
 
 class OTMMapViewController: UIViewController, MKMapViewDelegate {
 
+    //MARK: Annotations array
+    var annotations = [MKPointAnnotation]()
+    
     //MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
