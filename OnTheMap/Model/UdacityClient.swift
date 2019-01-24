@@ -201,6 +201,47 @@ class UdacityClient: NSObject {
         }
     }
     
+    //MARK: Post new location
+    func postNewLocation( _ viewController: UIViewController) {
+        //Create url
+        let newLocationUrl = buildUrl(UrlComponents.parseHost, withPathExtension: UrlComponents.parsePath)
+        //Create request
+        var request = URLRequest(url: newLocationUrl)
+        request.httpMethod = Methods.post
+        request.addValue(HTTPHeaderValues.applicationId, forHTTPHeaderField: HTTPHeaderKeys.applicationId)
+        request.addValue(HTTPHeaderValues.apiKey, forHTTPHeaderField: HTTPHeaderKeys.apiKey)
+        request.addValue(HTTPHeaderValues.json, forHTTPHeaderField: HTTPHeaderKeys.contentType)
+        //Add http body
+        let body: [String:Any] = [
+            HTTPBodyKeys.uniqueKey: HTTPBodyValues.uniqueKey,
+            HTTPBodyKeys.firstName: HTTPBodyValues.firstName,
+            HTTPBodyKeys.lastName: HTTPBodyValues.lastName,
+            HTTPBodyKeys.mapString: HTTPBodyValues.mapString,
+            HTTPBodyKeys.mediaUrl: HTTPBodyValues.mediaURL,
+            HTTPBodyKeys.latitude: HTTPBodyValues.latitude,
+            HTTPBodyKeys.longitude: HTTPBodyValues.longitude
+        ]
+        do {
+            request.httpBody = try JSONSerialization.data(withJSONObject: body, options: .prettyPrinted)
+        } catch {
+            displayError(error: "Something went wrong!", "Please check your network connection or try again later.", viewController: viewController)
+            return
+        }
+        //Handle requset
+        handleRequest(request, viewController) { (result, error) in
+            //Parse result
+            self.parseResult(result, error: error) { (result, error) in
+                //Check result isn't empty
+                if result!.count > 0 {
+                    viewController.dismiss(animated: true)
+                } else {
+                    self.displayError(error: "Something went wrong!", "Please check your network connection or try again later.", viewController: viewController)
+                    return
+                }
+            }
+        }
+    }
+    
     //MARK: Shared Instance
     class func sharedInstance() -> UdacityClient {
         //Create a singleton to allow global access of shared instance
