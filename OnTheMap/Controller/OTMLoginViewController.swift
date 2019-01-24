@@ -20,6 +20,21 @@ class OTMLoginViewController: UIViewController, UITextFieldDelegate {
         passwordTextField.delegate = self
     }
     
+    //MARK: Login Button
+    @IBAction func login() {
+        //Check text fields are not empty
+        if emailTextField.text! == "" || passwordTextField.text! == "" {
+            UdacityClient.sharedInstance().displayError(error: "Missing email and/or password", "Please enter your email address and password", viewController: self)
+            return
+        }
+        //Add username to model
+        UdacityClient.HTTPBodyValues.username = emailTextField.text!
+        //Add password to model
+        UdacityClient.HTTPBodyValues.password = passwordTextField.text!
+        //Call task for login
+        UdacityClient.sharedInstance().taskForLogin(self)
+    }
+    
     //MARK: Text Field Delegate functions
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
