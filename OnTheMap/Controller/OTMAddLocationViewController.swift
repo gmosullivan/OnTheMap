@@ -14,10 +14,16 @@ class OTMAddLocationViewController: UIViewController, UITextFieldDelegate {
     
     //MARK: Outlets
     @IBOutlet weak var locationTextField: UITextField!
+    @IBOutlet weak var urlTextField: UITextField!
+    @IBOutlet weak var findLocationButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         locationTextField.delegate = self
+        locationTextField.isHidden = false
+        urlTextField.delegate = self
+        urlTextField.isHidden = false
+        findLocationButton.isHidden = false
     }
 
 }
