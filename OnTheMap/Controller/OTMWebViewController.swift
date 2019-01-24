@@ -11,8 +11,12 @@ import WebKit
 
 class OTMWebViewController: UIViewController, WKUIDelegate {
 
+    //Web view
+    @IBOutlet weak var webView: WKWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        webView.uiDelegate = self
     }
 
 }
