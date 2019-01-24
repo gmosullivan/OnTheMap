@@ -14,6 +14,7 @@ class OTMLoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    //MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         emailTextField.delegate = self
