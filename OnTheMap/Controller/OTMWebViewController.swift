@@ -22,5 +22,15 @@ class OTMWebViewController: UIViewController, WKUIDelegate {
         super.viewDidLoad()
         webView.uiDelegate = self
     }
+    
+    //MARK: Load web view
+    func loadWebView( _ url: String) {
+        //Create request
+        let request = URLRequest(url: URL(string: urlString)!)
+        //Add sub view
+        self.view.addSubview(webView)
+        //Load request
+        webView.load(request)
+    }
 
 }
