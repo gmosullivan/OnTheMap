@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 import MapKit
 
-class OTMAddLocationViewController: UIViewController, UITextFieldDelegate {
+class OTMAddLocationViewController: UIViewController, UITextFieldDelegate, MKMapViewDelegate {
     
     //MARK: Outlets
     @IBOutlet weak var locationTextField: UITextField!
@@ -25,6 +25,7 @@ class OTMAddLocationViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         locationTextField.delegate = self
         urlTextField.delegate = self
+        mapView.delegate = self
         geocoding(inProcess: false)
     }
     
