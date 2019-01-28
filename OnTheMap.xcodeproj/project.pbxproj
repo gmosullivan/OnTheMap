@@ -81,7 +81,7 @@
 				7F8BA81D21F7934700E586EF /* View */,
 				7F8BA81E21F7936300E586EF /* Controller */,
 				7F8BA81F21F7938000E586EF /* Assests */,
-				7F8BA82021F7939200E586EF /* Supporting Files */,
+				7F8BA82021F7939200E586EF /* SupportingFiles */,
 			);
 			path = OnTheMap;
 			sourceTree = "<group>";
@@ -126,12 +126,12 @@
 			path = Assests;
 			sourceTree = "<group>";
 		};
-		7F8BA82021F7939200E586EF /* Supporting Files */ = {
+		7F8BA82021F7939200E586EF /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
 				7F8BA81621F7917300E586EF /* Info.plist */,
 			);
-			path = "Supporting Files";
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,7 +356,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A7AT4UCQAQ;
-				INFOPLIST_FILE = OnTheMap/Info.plist;
+				INFOPLIST_FILE = OnTheMap/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.locustredemption.OnTheMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -371,7 +371,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A7AT4UCQAQ;
-				INFOPLIST_FILE = OnTheMap/Info.plist;
+				INFOPLIST_FILE = OnTheMap/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.locustredemption.OnTheMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";

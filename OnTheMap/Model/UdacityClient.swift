@@ -178,7 +178,7 @@ class UdacityClient: NSObject {
     //MARK: Get Student Locations
     func getStudentLocations( _ viewController: UIViewController, _ locationsCompletionHandler: @escaping( _ success: Bool) -> Void) {
         //Set query items for url
-        let queryItems = [ParameterKeys.limit: ParameterValues.limit, ParameterValues.order: ParameterValues.order] as [String:AnyObject]
+        let queryItems = [ParameterKeys.limit: ParameterValues.limit, ParameterKeys.order: ParameterValues.order] as [String:AnyObject]
         //Create url
         let studentLocationUrl = buildUrl(UrlComponents.parseHost, UrlComponents.parsePath, withQueryItems: queryItems)
         //Create request

@@ -57,7 +57,7 @@ extension UdacityClient {
         static let account = "account"
         static let firstName = "first_name"
         static let key = "key"
-        static let lastName = "lastName"
+        static let lastName = "last_name"
         static let results = "results"
         static let session = "session"
         static let registered = "registered"
