@@ -44,18 +44,23 @@ class OTMAddLocationViewController: UIViewController, UITextFieldDelegate, MKMap
         //Create geocoder
         let geocoder = CLGeocoder()
         geocoder.geocodeAddressString(UdacityClient.HTTPBodyValues.mapString) { (placemarks, error) in
+            //Check for error
             guard error == nil else {
                 UdacityClient.sharedInstance().displayError(error: "Unable to find location", "Please check network connection or enter a different location.", viewController: self)
                 return
             }
+            //Get first placemark from array
             guard let placemark = placemarks?.first else {
                 UdacityClient.sharedInstance().displayError(error: "Unable to find location", "Please check network connection or enter a different location.", viewController: self)
                 return
             }
+            //Add coordinates to model
             let location = placemark.location?.coordinate
             UdacityClient.HTTPBodyValues.latitude = location!.latitude
             UdacityClient.HTTPBodyValues.longitude = location!.longitude
+            //Add pin
             self.mapView.addAnnotation(MKPlacemark(placemark: placemark))
+            //Set UI
             self.geocodingFinished()
         }
     }
@@ -97,6 +102,7 @@ class OTMAddLocationViewController: UIViewController, UITextFieldDelegate, MKMap
     
     //Map view delegate functions
     func mapViewWillStartLoadingMap(_ mapView: MKMapView) {
+        //Set region for map view
         let region = MKCoordinateRegion(center: CLLocationCoordinate2DMake(UdacityClient.HTTPBodyValues.latitude, UdacityClient.HTTPBodyValues.longitude), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
         mapView.setRegion(region, animated: true)
     }
