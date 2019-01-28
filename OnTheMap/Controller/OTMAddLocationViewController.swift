@@ -94,5 +94,11 @@ class OTMAddLocationViewController: UIViewController, UITextFieldDelegate, MKMap
         urlTextField.isHidden = true
         findLocationButton.isHidden = true
     }
+    
+    //Map view delegate functions
+    func mapViewWillStartLoadingMap(_ mapView: MKMapView) {
+        let region = MKCoordinateRegion(center: CLLocationCoordinate2DMake(UdacityClient.HTTPBodyValues.latitude, UdacityClient.HTTPBodyValues.longitude), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
+        mapView.setRegion(region, animated: true)
+    }
 
 }
